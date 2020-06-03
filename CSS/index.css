@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  /* background: #000000; */
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to left, #434343, #000000); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to left, #434343, #000000); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+}
+
+/* HEADER - SOCIAL MEDIAS AND PHONE */
+
+.social-medias {
+  text-align: center;
+  height: 25px;
+  width: 100%;
+  background-color: rgb(190, 190, 190, 0.7);
+}
+
+.social-medias ul {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.social-medias ul li {
+  margin-left: 30px;
+}
+
+.social-medias a {
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.social-medias a:hover {
+  color: #0080DE;
+  transition: 400ms;
+}
+
+/* HEADER - MENU */
+
+.logo {
+  margin-left: 10px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  background: rgb(222, 222, 222, 0.8);
+  height: 80px;
+  width: 100%;
+  text-decoration: none;
+  z-index: 1;
+}
+
+nav ul {
+  float: right;
+  margin-top: 5px;
+  margin-right: 60px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: gray;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 7px 13px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  transition: 400ms;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* BODY - ALL CONTENT */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1.3fr 1fr 0.5fr;
+  gap: 1px 1px;
+  grid-template-areas: "section1-grid" "section2-grid" "section3-grid";
+}
+
+.section1-grid {
+  grid-area: section1-grid;
+}
+
+.section2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "section2-info section2-pic";
+  grid-area: section2-grid;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.section2-info {
+  grid-area: section2-info;
+}
+.section2-info h1 {
+  text-align: center;
+  margin-top: 25%;
+}
+.section2-info p {
+  text-align: justify;
+  margin-left: 55px;
+}
+
+.section2-pic {
+  grid-area: section2-pic;
+  text-align: center;
+}
+
+.section2-pic img {
+  margin-top: 25%;
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
+}
+
+.section3-grid {
+  grid-area: section3-grid;
+}
+
+/*=====================*/
+
+/* Slideshow container */
+
+/*=====================*/
+
+.slideshow-container {
+  max-width: 100%;
+  max-height: 100vh;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(50, 60, 170, 0.6) 100%);
+}
+
+.slideshow-container img {
+  max-height: 100vh;
+  opacity: 0.8;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 27px;
+    padding-left: 25px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  nav {
+    text-align: center;
+  }
+  .logo {
+    margin-left: 85px;
+  }
+  .checkbtn {
+    display: block;
+    margin-right: 40px;
+  }
+  ul {
+    position: absolute;
+    width: 100%;
+    background: rgb(255, 255, 255, 0.7);
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all .7s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: none;
+  }
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .logo {
+    margin-left: 50px;
+  }
+  .checkbtn {
+    margin-right: 10px;
+  }
+}
