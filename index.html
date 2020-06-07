@@ -13,6 +13,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./CSS/index.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Dominoni Advocacia</title>
 </head>
 
@@ -57,34 +58,38 @@
         <div class="mySlides fade">
           <!-- <div class="numbertext">2 / 3</div> -->
           <img src="./Images/slideshow1.jpg" style="width:100%">
-          <div class="text"><h4>"Lorem ipsum dolor sit amet consectetur adipisicing elit"</h4></div>
+          <div class="text">
+            <h4>"Lorem ipsum dolor sit amet consectetur adipisicing elit"</h4>
+          </div>
         </div>
 
         <div class="mySlides fade">
           <!-- <div class="numbertext">3 / 3</div> -->
           <img src="./Images/slideshow3.jpg" style="width:100%">
-          <div class="text"><h4>"Lorem ipsum dolor sit amet consectetur adipisicing elit"</h4></div>
+          <div class="text">
+            <h4>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</h4>
+          </div>
         </div>
 
       </div>
     </div>
     <div class="section2-grid">
-      <div class="section2-info">
+      <div class="section2-info" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000">
         <h1>SOBRE DOGGO</h1>
         <br>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nulla possimus autem voluptate impedit ut, est
           quibusdam ullam ab reprehenderit, tempora nihil, similique deleniti ipsa consequatur ea error. Officiis, ame
         </p>
       </div>
-      <div class="section2-pic">
+      <div class="section2-pic" data-aos="fade-left" data-aos-offset="200" data-aos-delay="900" data-aos-duration="1000">
         <img src="./Images/exampleProfile.jpeg" alt="">
 
       </div>
     </div>
     <div class="section3-grid">
-      <h1>O que posso ajudar</h1>
+      <h1 data-aos="fade-right">O que posso ajudar</h1>
       <div class="section3-cards">
-        <div class="card">
+        <div class="card" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000">
           <div class="card-hover"></div>
           <img src="./Images/card1.jpg" alt="Avatar">
           <div class="container">
@@ -92,7 +97,7 @@
             <p>Example 1</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="500" data-aos-duration="1000">
           <div class="card-hover"></div>
           <img src="./Images/card2.jpg" alt="Avatar">
           <div class="container">
@@ -100,7 +105,7 @@
             <p>Example 2</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-left" data-aos-offset="200" data-aos-delay="1000" data-aos-duration="1000">
           <div class="card-hover"></div>
           <img src="./Images/card3.jpg" alt="Avatar">
           <div class="container">
@@ -138,6 +143,14 @@
     <p id="copyright"> Copyright &copy; Dominoni Advocacia - Todos os direitos reservados </p>
   </footer>
   <script src="./JS/slideshow.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // offset: 400,
+      // duration: 1000
+      once: true
+    });
+  </script>
 
   <!-- https://grid.layoutit.com/?id=TqQTvjb -->
 
